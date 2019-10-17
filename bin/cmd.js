@@ -474,6 +474,8 @@ function runDownload (torrentId) {
       : `http://localhost:${server.address().port}`
 
     href += `/${index}/${encodeURIComponent(torrent.files[index].name)}`
+    href = `"${href}"`
+
 
     if (playerName) {
       torrent.files[index].select()
